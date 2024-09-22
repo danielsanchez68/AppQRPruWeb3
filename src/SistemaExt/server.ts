@@ -45,7 +45,7 @@ class Server implements IServer {
                     buffer = ''
                     let datosEnviados = {}
 
-                    const cmd = JSON.parse(await fs.promises.readFile('../Comandos/listado.json', 'utf-8'))
+                    const cmd = JSON.parse(await fs.promises.readFile('./Comandos/listado.json', 'utf-8'))
 
                     //nuevo server TCP
                     const comando = datosRecibidos?.Comando
