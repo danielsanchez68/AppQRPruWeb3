@@ -60,7 +60,7 @@ let Server = class Server {
                     let datosEnviados = {};
                     console.log('__dirname (class Server):', __dirname);
                     //const cmd = JSON.parse(await fs.promises.readFile(__dirname + '/Comandos/listado.json', 'utf-8'))
-                    const cmd = JSON.parse(yield fs_1.default.promises.readFile('SistemaExt/Comandos/listado.json', 'utf-8'));
+                    const cmd = JSON.parse(yield fs_1.default.promises.readFile('./SistemaExt/Comandos/listado.json', 'utf-8'));
                     const ruta = path_1.default.join(__dirname, '../Comandos/listado.json');
                     console.log('ruta (class Server):', ruta);
                     //const cmd = JSON.parse(await fs.promises.readFile(ruta, 'utf-8'))
