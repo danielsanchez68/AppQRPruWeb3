@@ -15,7 +15,7 @@ class TimeOut {
             this.imeisLive[imei].to = Date.now();
         };
         this.getLives = () => this.imeisLive;
-        this.getColorImei = (imei) => this.imeisLive[imei].color || coloring_1.default.FgWhite;
+        this.getColorImei = (imei) => { var _a; return ((_a = this.imeisLive[imei]) === null || _a === void 0 ? void 0 : _a.color) || coloring_1.default.FgWhite; };
         this.getSendLogin = (imei) => this.imeisLive[imei].sendLogin || false;
         this.resetSendLogin = (imei) => this.imeisLive[imei].sendLogin = false;
         this.imeisLive = {};

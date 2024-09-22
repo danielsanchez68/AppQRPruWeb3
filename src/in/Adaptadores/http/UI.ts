@@ -45,7 +45,7 @@ class UI_HTTP implements IUI {
         // --------------------------------------------------------------
         //app.use(express.static('public'))
         // Servir archivos estáticos desde la carpeta "public"
-        app.use(express.static(path.join(__dirname, '../../../public')));
+        app.use(express.static(path.join(__dirname, '../../../../public')));
         // Ruta principal
         /* app.get('/', (req: Request, res: Response) => {
             //res.send('Hola Vercel root!: '+ __dirname);

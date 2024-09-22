@@ -28,7 +28,7 @@ class TimeOut {
         this.imeisLive[imei].to = Date.now()
     }
     getLives = () => this.imeisLive
-    getColorImei = (imei:string) => this.imeisLive[imei].color || Color.FgWhite
+    getColorImei = (imei:string) => this.imeisLive[imei]?.color || Color.FgWhite
     getSendLogin = (imei:string) => this.imeisLive[imei].sendLogin || false
     resetSendLogin = (imei:string) => this.imeisLive[imei].sendLogin = false
 }
