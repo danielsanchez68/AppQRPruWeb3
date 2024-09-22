@@ -48,7 +48,7 @@ class UI_HTTP implements IUI {
         //app.use(express.static(path.join(__dirname, 'public')));
         // Ruta principal
         app.get('/', (req: Request, res: Response) => {
-            res.send('Hola Vercel root!');
+            res.send('Hola Vercel root!: '+ __dirname);
             //res.send(path.join(__dirname, 'public', 'index.html'));
         });
         // --------------------------------------------------------------

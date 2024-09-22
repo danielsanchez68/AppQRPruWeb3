@@ -56,7 +56,7 @@ let UI_HTTP = class UI_HTTP {
             //app.use(express.static(path.join(__dirname, 'public')));
             // Ruta principal
             app.get('/', (req, res) => {
-                res.send('Hola Vercel root!');
+                res.send('Hola Vercel root!: ' + __dirname);
                 //res.send(path.join(__dirname, 'public', 'index.html'));
             });
             // --------------------------------------------------------------
