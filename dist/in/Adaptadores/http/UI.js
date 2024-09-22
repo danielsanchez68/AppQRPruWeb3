@@ -26,6 +26,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const http_1 = __importDefault(require("http"));
+const path_1 = __importDefault(require("path"));
 const config_1 = __importDefault(require("../../../config"));
 const cors_1 = __importDefault(require("cors"));
 const inversify_1 = require("inversify");
@@ -49,8 +50,16 @@ let UI_HTTP = class UI_HTTP {
         return __awaiter(this, void 0, void 0, function* () {
             const app = (0, express_1.default)();
             app.use((0, cors_1.default)());
-            app.use(express_1.default.static('public'));
             app.use(express_1.default.json());
+            // --------------------------------------------------------------
+            //app.use(express.static('public'))
+            // Servir archivos estáticos desde la carpeta "public"
+            app.use(express_1.default.static(path_1.default.join(__dirname, 'public')));
+            // Ruta principal
+            app.get('/', (req, res) => {
+                res.sendFile(path_1.default.join(__dirname, 'public', 'index.html'));
+            });
+            // --------------------------------------------------------------
             // --------- Configuración de Rutas / endpoints ---------
             app.use('/api/maquina', this.configRouterMaq());
             app.use('/api/usuario', this.configRouterUsuario());
