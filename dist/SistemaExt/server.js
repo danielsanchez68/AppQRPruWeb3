@@ -58,7 +58,7 @@ let Server = class Server {
                     buffer = '';
                     let datosEnviados = {};
                     console.log('__dirname:', __dirname);
-                    const cmd = JSON.parse(yield fs_1.default.promises.readFile('./Comandos/listado.json', 'utf-8'));
+                    const cmd = JSON.parse(yield fs_1.default.promises.readFile('../Comandos/listado.json', 'utf-8'));
                     //nuevo server TCP
                     const comando = datosRecibidos === null || datosRecibidos === void 0 ? void 0 : datosRecibidos.Comando;
                     imei = datosRecibidos === null || datosRecibidos === void 0 ? void 0 : datosRecibidos.imei;
