@@ -48,7 +48,7 @@ class UI_HTTP implements IUI {
         app.use(express.static(path.join(__dirname, 'public')));
         // Ruta principal
         app.get('/', (req: Request, res: Response) => {
-            res.sendFile(path.join(__dirname, 'public', 'index.html'));
+            res.send(path.join(__dirname, 'public', 'index.html'));
         });
         // --------------------------------------------------------------
 
