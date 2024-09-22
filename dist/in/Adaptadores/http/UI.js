@@ -53,7 +53,10 @@ let UI_HTTP = class UI_HTTP {
             app.use(express_1.default.json());
             // --------------------------------------------------------------
             //app.use(express.static('public'))
-            app.use(express_1.default.static(path_1.default.join(__dirname, '../../../public')));
+            console.log('__dirname (class UI_HTTP):', __dirname);
+            const ruta = path_1.default.join(__dirname, '../../../public');
+            console.log('ruta (class UI_HTTP):', ruta);
+            app.use(express_1.default.static(ruta));
             // --------- Configuración de Rutas / endpoints ---------
             app.use('/api/maquina', this.configRouterMaq());
             app.use('/api/usuario', this.configRouterUsuario());

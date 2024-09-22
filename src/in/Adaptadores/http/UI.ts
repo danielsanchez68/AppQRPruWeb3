@@ -44,7 +44,10 @@ class UI_HTTP implements IUI {
 
         // --------------------------------------------------------------
         //app.use(express.static('public'))
-        app.use(express.static(path.join(__dirname, '../../../public')));
+        console.log('__dirname (class UI_HTTP):', __dirname)
+        const ruta = path.join(__dirname, '../../../public')
+        console.log('ruta (class UI_HTTP):', ruta)
+        app.use(express.static(ruta));
 
         // --------- Configuración de Rutas / endpoints ---------
         app.use('/api/maquina', this.configRouterMaq())
