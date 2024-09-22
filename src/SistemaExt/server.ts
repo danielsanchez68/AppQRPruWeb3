@@ -47,8 +47,8 @@ class Server implements IServer {
                     let datosEnviados = {}
 
                     console.log('__dirname (class Server):', __dirname)
-                    //const cmd = JSON.parse(await fs.promises.readFile(__dirname + '/Comandos/listado.json', 'utf-8'))
-                    const cmd = JSON.parse(await fs.promises.readFile('./SistemaExt/Comandos/listado.json', 'utf-8'))
+                    const cmd = JSON.parse(await fs.promises.readFile(__dirname + '/Comandos/listado.json', 'utf-8'))
+                    //const cmd = JSON.parse(await fs.promises.readFile('./SistemaExt/Comandos/listado.json', 'utf-8'))
 
                     const ruta = path.join(__dirname, '../Comandos/listado.json')
                     console.log('ruta (class Server):', ruta)
