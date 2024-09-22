@@ -25,7 +25,6 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const net_1 = __importDefault(require("net"));
-const path_1 = __importDefault(require("path"));
 const fs_1 = __importDefault(require("fs"));
 const delay_1 = __importDefault(require("./util/delay"));
 const config_1 = __importDefault(require("./config"));
@@ -59,8 +58,8 @@ let Server = class Server {
                     buffer = '';
                     let datosEnviados = {};
                     console.log('__dirname:', __dirname);
-                    const cmd = JSON.parse(yield fs_1.default.promises.readFile(path_1.default.join(__dirname, '../Comandos/listado.json'), 'utf-8'));
-                    //const cmd = JSON.parse(await fs.promises.readFile(__dirname + '/Comandos/listado.json', 'utf-8'))
+                    //const cmd = JSON.parse(await fs.promises.readFile(path.join(__dirname, '../Comandos/listado.json'), 'utf-8'))
+                    const cmd = JSON.parse(yield fs_1.default.promises.readFile(__dirname + '/Comandos/listado.json', 'utf-8'));
                     //nuevo server TCP
                     const comando = datosRecibidos === null || datosRecibidos === void 0 ? void 0 : datosRecibidos.Comando;
                     imei = datosRecibidos === null || datosRecibidos === void 0 ? void 0 : datosRecibidos.imei;
