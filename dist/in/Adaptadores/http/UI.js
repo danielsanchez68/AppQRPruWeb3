@@ -54,7 +54,7 @@ let UI_HTTP = class UI_HTTP {
             // --------------------------------------------------------------
             //app.use(express.static('public'))
             // Servir archivos estáticos desde la carpeta "public"
-            app.use(express_1.default.static(path_1.default.join(__dirname, '../../../../public')));
+            app.use(express_1.default.static(path_1.default.join(__dirname, '../../../public')));
             // Ruta principal
             /* app.get('/', (req: Request, res: Response) => {
                 //res.send('Hola Vercel root!: '+ __dirname);
