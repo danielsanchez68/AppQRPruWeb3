@@ -58,7 +58,7 @@ let UI_HTTP = class UI_HTTP {
             // Ruta principal
             app.get('/', (req, res) => {
                 //res.send('Hola Vercel root!: '+ __dirname);
-                res.send(path_1.default.join(__dirname, 'public', 'index.html'));
+                res.sendFile(path_1.default.join(__dirname, 'public', 'index.html'));
             });
             // --------------------------------------------------------------
             // --------- Configuración de Rutas / endpoints ---------
